@@ -162,8 +162,7 @@ def main():
         if pygame.sprite.collide_mask(myBall,myPaddle):
             if myBall.rect.bottom >= myPaddle.rect.top:
                 myBall.movement[1] = -1*myBall.movement[1]
-                myBall.movement[0] = myBall.movement[0] - myPaddle.movement[0]
-
+                myBall.movement[0] = myBall.movement[0] - myPaddle.movement[0]/(random.randrange(0,8) + 1)
 
         myPaddle.update()
         bricks.update()
